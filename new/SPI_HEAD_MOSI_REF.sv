@@ -33,7 +33,7 @@ module SPI_HEAD_MOSI_REF #(
     parameter int CPOL_MOSI = 0, 
     parameter int CPHA_MOSI = 0, 
     parameter int DISPLAY_INPUT_LENGTH = 8,
-    parameter int DIV_RATE = 1  // [수정됨] 누락된 DIV_RATE 추가
+    parameter int DIV_RATE = 1  // [수정됨] DIV_RATE 추가
 ) (
     input  logic clk,
     input  logic mosi_request,
@@ -246,7 +246,7 @@ module SPI_HEAD_MOSI_REF #(
                 cs_mosi_init = 1'b1; 
             end
             INST_DONE : begin
-                initial_inst_end = 1'b1; // 초기화 완료! 이 시점부터 Bypass 활성화
+                initial_inst_end = 1'b1; 
             end
         endcase
     end
