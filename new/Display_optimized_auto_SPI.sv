@@ -40,13 +40,13 @@ module Display_optimized_auto_SPI #(parameter int data_length_in = 12)
     output logic reset_OUT
     );
     
-    logic system_clk;      // 5MHz (설정하신 값)
-    logic FIFO_INPUT_CLK;  // 2MHz (설정하신 값)
+    logic system_clk;      // 5MHz
+    logic FIFO_INPUT_CLK;  // 2MHz 
     logic clk_locked;
 
     // 2. IP 호출 및 포트 연결
     clk_wiz_0 u_clk_gen (
-    // 출력 포트 (IP 포트 이름 : 여러분의 와이어 이름)
+    // 출력 포트 
     .clk_out1(system_clk),     
     .clk_out2(FIFO_INPUT_CLK), 
     
