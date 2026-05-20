@@ -46,12 +46,9 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
     logic [15:0] x_start_end_15_8;
     logic [2:0] done_count;
     
-    logic [DISPLAY_INPUT_LENGTH-1:0] instruction_data;
     logic [$clog2(DISPLAY_Y_COR)-1:0] line_counter;
     logic pixel_counter;
-    //명령어 데이터 구분해서 쏨
             
-    
     
     typedef enum logic [3:0] {
         IDLE,
@@ -59,6 +56,8 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
         X_COR,
         Y_INST,
         Y_COR,
+        CONTINU_INST,
+        CONTINU_WAIT, // [수정] 대기 상태 추가
         LINE,
         WAIT_X,
         WAIT_Y,
@@ -67,8 +66,6 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
     
     state_AUTO next_state = IDLE;
     state_AUTO AUTO_state = IDLE;
-    
-    //counter를 이용 239까지 셈. y_register == counter라면 rgb값을 5,6,5중 11111,111111,11111을 뱉음. 아니라면 all 0. counter full 도달시 line_done 뱉고 counter 초기화.
     
     always_ff@(posedge clk) begin
         if(reset || !initial_inst_end) begin
@@ -79,7 +76,7 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
             end
             end
             
-    always_comb begin //상태결정
+    always_comb begin 
         if(reset || !initial_inst_end) begin
             next_state = IDLE;
             end
@@ -95,23 +92,34 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
                     end
             X_INST : next_state = X_COR;
             X_COR : begin
-                if(done_count >= 4) next_state = WAIT_X;
+                if(done_count >= 5) next_state = WAIT_X;
                 else next_state = X_COR;
                 end
-            WAIT_X : next_state = Y_INST; 
+            WAIT_X : next_state = Y_INST;
+            Y_INST : next_state = Y_COR;
             Y_COR : begin
                 if(done_count >= 5) next_state = WAIT_Y;
                 else next_state = Y_COR;
             end
-            WAIT_Y : next_state = LINE; 
+            WAIT_Y : next_state = CONTINU_INST; 
+            
+            // [수정] 0x2C 전송 시작 후 CONTINU_WAIT로 넘어가도록 분리
+            CONTINU_INST : next_state = CONTINU_WAIT;
+            
+            // [수정] 전송 완료(mosi_done)를 기다리는 상태 추가
+            CONTINU_WAIT : begin
+                if(mosi_done) next_state = LINE;
+                else next_state = CONTINU_WAIT;
+            end
+            
             LINE : begin
-                if(line_counter >= DISPLAY_Y_COR - 1) next_state = WAIT_LINE;
+                if(line_counter >= DISPLAY_Y_COR) next_state = WAIT_LINE;
                 else next_state = LINE;
             end
             WAIT_LINE : next_state = DONE; 
             DONE : begin
                 if(mosi_req) begin
-                    next_state = X_COR;
+                    next_state = X_INST;
                     end
                 else begin
                     next_state = IDLE;
@@ -123,7 +131,7 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
              end
              end
              
-    always_comb begin //상태동작
+    always_comb begin 
         inst_out = 'b0;
         instruction_load = 'b0;
         line_done = 'b0;
@@ -135,7 +143,6 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
                 instruction_load = 'b0;
                 line_done = 'b0;
                 cs = 1'b1;
-                y_register = fifo_input;
                 end
             X_INST : begin
                 cs = 1'b0;
@@ -171,21 +178,36 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
                     inst_out = y_string_inst;
                     instruction_load = 1'b0;
                     end
-                1,3 : begin
+                1,2 : begin
                     data_out = 8'b0;
                     instruction_load = 1'b0;
                     end
-                2,4 : begin
-                    data_out = DISPLAY_Y_COR - 1;
-                    instruction_load = 1'b0;
+                3 : begin // [수정] End Y의 High Byte (상위 8비트)
+                    data_out = ((DISPLAY_Y_COR - 1) >> 8) & 8'hFF; 
+                    instruction_load = 1'b0; 
                     end
-                5 : begin
-                    inst_out = continuous_inst;
-                    instruction_load = 1'b1;
+                4 : begin // [수정] End Y의 Low Byte (하위 8비트)
+                    data_out = (DISPLAY_Y_COR - 1) & 8'hFF; 
+                    instruction_load = 1'b0;
                     end
                     endcase
                     end
-             LINE : begin
+                    
+            // [수정] CONTINU_INST에서는 instruction_load = 1'b1 (전송 시작 트리거)
+            CONTINU_INST : begin
+                cs = 1'b0;
+                inst_out = continuous_inst;
+                instruction_load = 1'b1;
+                end
+                
+            // [수정] CONTINU_WAIT에서는 instruction_load = 1'b0, cs = 1'b0 유지
+            CONTINU_WAIT : begin
+                cs = 1'b0;
+                inst_out = continuous_inst;
+                instruction_load = 1'b0;
+                end
+                
+            LINE : begin
                 cs = 1'b0;
                 if(line_counter <= DISPLAY_Y_COR - 1) begin
                     if(line_counter == y_register) begin
@@ -202,14 +224,16 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
                     instruction_load = 1'b0;
                     end
                     end
-             DONE : begin
+            DONE : begin
                 inst_out = 'b0;
                 instruction_load = 'b0;
                 line_done = 'b1;
                 data_out = 8'b0;
                 cs = 1'b1;
-                end    
-             WAIT_X, WAIT_Y, WAIT_LINE : begin
+                end   
+                
+            // [수정] 여기서 CONTINU_WAIT 삭제 
+            WAIT_X, WAIT_Y, WAIT_LINE : begin
                 cs = 1'b1;
                 end 
              endcase
@@ -222,6 +246,7 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
             line_counter <= 'b0;
             x_start_end_15_8 <= 'b0;
             pixel_counter <= 'b0;
+            y_register <= 'b0;
             end
         else begin
             case(AUTO_state)
@@ -237,7 +262,10 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
                     done_count <= done_count;
                     end
                     end
-            Y_INST : done_count <= 'b0;
+            Y_INST : begin 
+                done_count <= 'b0;
+                y_register <= fifo_input[DISPLAY_INPUT_LENGTH-1:0];
+                end
             Y_COR : begin
                 if(mosi_done) begin
                     done_count <= done_count + 1;
@@ -272,7 +300,9 @@ module auto_data_inst #(parameter int FIFO_OUT_LENGTH = 12, parameter int DISPLA
                     x_start_end_15_8 <= x_start_end_15_8 + 1;
                     end
                     end
-             WAIT_X, WAIT_Y, WAIT_LINE : begin
+                    
+            // [수정] CONTINU_WAIT 추가하여 대기 중에 카운터 및 레지스터 값 유지
+            WAIT_X, WAIT_Y, WAIT_LINE, CONTINU_INST, CONTINU_WAIT : begin
                 done_count <= done_count;
                 line_counter <= line_counter;
                 pixel_counter <= pixel_counter;

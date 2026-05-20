@@ -36,13 +36,13 @@ module enable_gen_dcx
     
     logic [1:0] sclk_reg_miso;
     logic [1:0] sclk_reg_mosi;
-    
 
     always_ff@(posedge clk) begin
         if(reset) begin
             sclk_reg_miso <= 2'b0;
             sclk_reg_mosi <= 2'b0;
-        end else begin
+        end 
+        else begin
             sclk_reg_miso <= {sclk_reg_miso[0], sclk};
             sclk_reg_mosi <= {sclk_reg_mosi[0], sclk};
         end
@@ -71,5 +71,6 @@ module enable_gen_dcx
                 if ({sclk_reg_mosi[0], sclk} == 2'b01) enable_mosi = 1'b1;
             end
         endcase
-    end
+        end
+    
 endmodule
