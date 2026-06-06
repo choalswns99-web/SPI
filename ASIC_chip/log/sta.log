@@ -1,0 +1,694 @@
+Qflow static timing analysis logfile created on Fri 05 Jun 2026 01:20:31 AM PDT
+Running vesta static timing analysis
+vesta --long Display_optimized_auto_SPI.rtlnopwr.v /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.100
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "etri05_stdcells"
+End of library at line 6606
+Lib read /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib:  Processed 6607 lines.
+Parsing module "Display_optimized_auto_SPI"
+Verilog netlist read:  Processed 23720 lines.
+Number of paths analyzed:  109
+
+Top 20 maximum delay paths:
+Path _1494_/CLK to _1512_/D delay 4210.83 ps
+      0.0 ps                                       system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1494_/CLK
+    452.4 ps  \u_SPI_HEAD_MOSI_REF.reset_hw_and_sleep_out_counter [1]:           _1494_/Q -> _1227_/A
+    842.2 ps                                                    _279_:           _1227_/Y -> _1251_/B
+   1102.1 ps                                                    _301_:           _1251_/Y -> _1260_/C
+   1395.0 ps                                                    _309_:           _1260_/Y -> _1300_/C
+   1640.3 ps                                                    _346_:           _1300_/Y -> _1344_/C
+   1949.0 ps                                                    _387_:           _1344_/Y -> _1371_/C
+   2263.4 ps                                                    _412_:           _1371_/Y -> _1400_/C
+   2660.0 ps                                                    _439_:           _1400_/Y -> _1435_/C
+   2937.3 ps                                                    _471_:           _1435_/Y -> _1450_/C
+   3167.4 ps                                                    _485_:           _1450_/Y -> _1451_/B
+   3403.3 ps                                                    _486_:           _1451_/Y -> _1453_/A
+   3556.9 ps                                                    _488_:           _1453_/Y -> _1458_/A
+   3701.4 ps                                                    _493_:           _1458_/Y -> _1461_/A
+   3817.1 ps                                                _117_[19]:           _1461_/Y -> _1512_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.07
+
+Path _1494_/CLK to _1511_/D delay 4110.97 ps
+      0.0 ps                                       system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1494_/CLK
+    452.4 ps  \u_SPI_HEAD_MOSI_REF.reset_hw_and_sleep_out_counter [1]:           _1494_/Q -> _1227_/A
+    842.2 ps                                                    _279_:           _1227_/Y -> _1251_/B
+   1102.1 ps                                                    _301_:           _1251_/Y -> _1260_/C
+   1395.0 ps                                                    _309_:           _1260_/Y -> _1300_/C
+   1640.3 ps                                                    _346_:           _1300_/Y -> _1344_/C
+   1949.0 ps                                                    _387_:           _1344_/Y -> _1371_/C
+   2263.4 ps                                                    _412_:           _1371_/Y -> _1400_/C
+   2660.0 ps                                                    _439_:           _1400_/Y -> _1435_/C
+   2937.3 ps                                                    _471_:           _1435_/Y -> _1436_/B
+   3142.7 ps                                                    _472_:           _1436_/Y -> _1438_/B
+   3315.8 ps                                                    _474_:           _1438_/Y -> _1440_/A
+   3459.4 ps                                                    _476_:           _1440_/Y -> _1444_/A
+   3601.8 ps                                                    _480_:           _1444_/Y -> _1447_/A
+   3717.3 ps                                                _117_[18]:           _1447_/Y -> _1511_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.027
+
+Path _1494_/CLK to _1510_/D delay 3932.57 ps
+      0.0 ps                                       system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1494_/CLK
+    452.4 ps  \u_SPI_HEAD_MOSI_REF.reset_hw_and_sleep_out_counter [1]:           _1494_/Q -> _1227_/A
+    842.2 ps                                                    _279_:           _1227_/Y -> _1251_/B
+   1102.1 ps                                                    _301_:           _1251_/Y -> _1260_/C
+   1395.0 ps                                                    _309_:           _1260_/Y -> _1300_/C
+   1640.3 ps                                                    _346_:           _1300_/Y -> _1344_/C
+   1949.0 ps                                                    _387_:           _1344_/Y -> _1371_/C
+   2263.4 ps                                                    _412_:           _1371_/Y -> _1400_/C
+   2660.0 ps                                                    _439_:           _1400_/Y -> _1422_/B
+   2918.2 ps                                                    _459_:           _1422_/Y -> _1425_/A
+   3130.9 ps                                                    _462_:           _1425_/Y -> _1427_/A
+   3279.7 ps                                                    _464_:           _1427_/Y -> _1431_/A
+   3423.0 ps                                                    _468_:           _1431_/Y -> _1434_/A
+   3538.6 ps                                                _117_[17]:           _1434_/Y -> _1510_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.3
+
+Path _1494_/CLK to _1509_/D delay 3906.56 ps
+      0.0 ps                                       system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1494_/CLK
+    452.4 ps  \u_SPI_HEAD_MOSI_REF.reset_hw_and_sleep_out_counter [1]:           _1494_/Q -> _1227_/A
+    842.2 ps                                                    _279_:           _1227_/Y -> _1251_/B
+   1102.1 ps                                                    _301_:           _1251_/Y -> _1260_/C
+   1395.0 ps                                                    _309_:           _1260_/Y -> _1300_/C
+   1640.3 ps                                                    _346_:           _1300_/Y -> _1344_/C
+   1949.0 ps                                                    _387_:           _1344_/Y -> _1371_/C
+   2263.4 ps                                                    _412_:           _1371_/Y -> _1400_/C
+   2660.0 ps                                                    _439_:           _1400_/Y -> _1411_/A
+   2936.7 ps                                                    _449_:           _1411_/Y -> _1412_/B
+   3111.0 ps                                                    _450_:           _1412_/Y -> _1414_/A
+   3254.8 ps                                                    _452_:           _1414_/Y -> _1418_/A
+   3397.2 ps                                                    _456_:           _1418_/Y -> _1421_/A
+   3512.6 ps                                                _117_[16]:           _1421_/Y -> _1509_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.278
+
+Path _1530_/CLK to _1007_/D delay 3851.52 ps
+      0.0 ps                   system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1530_/CLK
+    465.9 ps  \u_SPI_HEAD_MOSI_REF.INST_state [1]:          _1530_/Q -> _1038_/A
+    748.0 ps                                _127_:          _1038_/Y -> _1039_/B
+    891.5 ps                                _128_:          _1039_/Y -> _1040_/A
+   1154.7 ps                                _129_:          _1040_/Y -> _1056_/B
+   1485.6 ps                                _143_:          _1056_/Y -> _1082_/C
+   2025.8 ps                                  _1_:          _1082_/Y ->  _897_/A
+   2743.7 ps                                 _86_:           _897_/Y ->  _898_/A
+   3165.0 ps                                 _87_:           _898_/Y ->  _904_/C
+   3352.2 ps                                 _93_:           _904_/Y ->  _905_/B
+   3460.4 ps                                 _15_:           _905_/Y -> _1007_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 361.457
+
+Path _1494_/CLK to _1508_/D delay 3827.85 ps
+      0.0 ps                                       system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1494_/CLK
+    452.4 ps  \u_SPI_HEAD_MOSI_REF.reset_hw_and_sleep_out_counter [1]:           _1494_/Q -> _1227_/A
+    842.2 ps                                                    _279_:           _1227_/Y -> _1251_/B
+   1102.1 ps                                                    _301_:           _1251_/Y -> _1260_/C
+   1395.0 ps                                                    _309_:           _1260_/Y -> _1300_/C
+   1640.3 ps                                                    _346_:           _1300_/Y -> _1344_/C
+   1949.0 ps                                                    _387_:           _1344_/Y -> _1371_/C
+   2263.4 ps                                                    _412_:           _1371_/Y -> _1400_/C
+   2660.0 ps                                                    _439_:           _1400_/Y -> _1401_/B
+   2872.9 ps                                                    _440_:           _1401_/Y -> _1405_/B
+   3022.7 ps                                                    _444_:           _1405_/Y -> _1406_/B
+   3171.3 ps                                                    _445_:           _1406_/Y -> _1407_/B
+   3318.3 ps                                                    _446_:           _1407_/Y -> _1409_/A
+   3434.1 ps                                                _117_[15]:           _1409_/Y -> _1508_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.082
+
+Path _2000_/CLK to _1020_/D delay 3806.28 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1955_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[6]:          _1955_/Y -> _1089_/B
+   2888.0 ps               DATA_HEAD_TO_SPI[6]:          _1089_/Y ->  _976_/B
+   3019.7 ps                              _59_:           _976_/Y ->  _977_/C
+   3148.4 ps                              _60_:           _977_/Y ->  _978_/C
+   3304.7 ps                              _61_:           _978_/Y ->  _979_/D
+   3411.6 ps                            _6_[6]:           _979_/Y -> _1020_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 365.041
+
+Path _2000_/CLK to _1019_/D delay 3766.22 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1950_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[5]:          _1950_/Y -> _1088_/B
+   2888.0 ps               DATA_HEAD_TO_SPI[5]:          _1088_/Y ->  _968_/B
+   3027.7 ps                              _52_:           _968_/Y ->  _970_/B
+   3177.4 ps                              _54_:           _970_/Y ->  _971_/B
+   3283.8 ps                              _55_:           _971_/Y ->  _972_/C
+   3373.9 ps                            _6_[5]:           _972_/Y -> _1019_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 362.62
+
+Path _2000_/CLK to _1015_/D delay 3766.22 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1933_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[1]:          _1933_/Y -> _1084_/B
+   2888.0 ps               DATA_HEAD_TO_SPI[1]:          _1084_/Y ->  _943_/B
+   3027.7 ps                              _31_:           _943_/Y ->  _945_/B
+   3177.4 ps                              _33_:           _945_/Y ->  _946_/B
+   3283.8 ps                              _34_:           _946_/Y ->  _947_/C
+   3373.9 ps                            _6_[1]:           _947_/Y -> _1015_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 362.62
+
+Path _2000_/CLK to _1021_/D delay 3765.64 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1959_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[7]:          _1959_/Y -> _1090_/B
+   2872.8 ps               DATA_HEAD_TO_SPI[7]:          _1090_/Y ->  _981_/A
+   2981.6 ps                              _63_:           _981_/Y ->  _983_/B
+   3114.4 ps                              _65_:           _983_/Y ->  _987_/A
+   3256.5 ps                              _69_:           _987_/Y ->  _988_/A
+   3371.9 ps                            _6_[7]:           _988_/Y -> _1021_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.023
+
+Path _2000_/CLK to _1017_/D delay 3747.48 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1941_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[3]:          _1941_/Y -> _1086_/B
+   2888.0 ps               DATA_HEAD_TO_SPI[3]:          _1086_/Y ->  _956_/B
+   3019.7 ps                              _42_:           _956_/Y ->  _957_/C
+   3136.9 ps                              _43_:           _957_/Y ->  _958_/B
+   3260.8 ps                              _44_:           _958_/Y ->  _959_/B
+   3356.5 ps                            _6_[3]:           _959_/Y -> _1017_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 361.302
+
+Path _2000_/CLK to _1016_/D delay 3747.48 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1937_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[2]:          _1937_/Y -> _1085_/B
+   2888.0 ps               DATA_HEAD_TO_SPI[2]:          _1085_/Y ->  _950_/B
+   3019.7 ps                              _37_:           _950_/Y ->  _951_/C
+   3136.9 ps                              _38_:           _951_/Y ->  _952_/B
+   3260.8 ps                              _39_:           _952_/Y ->  _953_/B
+   3356.5 ps                            _6_[2]:           _953_/Y -> _1016_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 361.302
+
+Path _2000_/CLK to _1018_/D delay 3741.19 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1945_/C
+   2731.9 ps          DATA_OUT_AUTO_TO_HEAD[4]:          _1945_/Y -> _1087_/B
+   2881.5 ps               DATA_HEAD_TO_SPI[4]:          _1087_/Y ->  _962_/B
+   3013.4 ps                              _47_:           _962_/Y ->  _963_/C
+   3130.6 ps                              _48_:           _963_/Y ->  _964_/B
+   3254.5 ps                              _49_:           _964_/Y ->  _965_/B
+   3350.2 ps                            _6_[4]:           _965_/Y -> _1018_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 361.302
+
+Path _2000_/CLK to _1014_/D delay 3734.42 ps
+      0.0 ps                system_clk_bF$buf6: CLKBUF1_insert7/Y -> _2000_/CLK
+    418.5 ps  \u_auto_data_inst.AUTO_state [3]:          _2000_/Q -> _1641_/A
+    720.7 ps                             _620_:          _1641_/Y -> _1647_/B
+   1000.4 ps                             _625_:          _1647_/Y -> _1648_/A
+   1286.2 ps                             _626_:          _1648_/Y -> _1665_/B
+   1794.4 ps                             _643_:          _1665_/Y -> _1890_/B
+   2018.5 ps                             _829_:          _1890_/Y -> _1926_/C
+   2193.7 ps                             _860_:          _1926_/Y -> _1927_/A
+   2570.0 ps                             _861_:          _1927_/Y -> _1928_/C
+   2738.5 ps          DATA_OUT_AUTO_TO_HEAD[0]:          _1928_/Y -> _1083_/B
+   2872.8 ps               DATA_HEAD_TO_SPI[0]:          _1083_/Y ->  _935_/A
+   2981.6 ps                              _24_:           _935_/Y ->  _937_/B
+   3106.2 ps                              _26_:           _937_/Y ->  _938_/C
+   3247.2 ps                              _27_:           _938_/Y ->  _939_/B
+   3343.4 ps                            _6_[0]:           _939_/Y -> _1014_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 361.376
+
+Path _1530_/CLK to _1012_/D delay 3733.87 ps
+      0.0 ps                   system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1530_/CLK
+    465.9 ps  \u_SPI_HEAD_MOSI_REF.INST_state [1]:          _1530_/Q -> _1038_/A
+    748.0 ps                                _127_:          _1038_/Y -> _1039_/B
+    891.5 ps                                _128_:          _1039_/Y -> _1040_/A
+   1154.7 ps                                _129_:          _1040_/Y -> _1056_/B
+   1485.6 ps                                _143_:          _1056_/Y -> _1082_/C
+   2025.8 ps                                  _1_:          _1082_/Y ->  _897_/A
+   2743.7 ps                                 _86_:           _897_/Y ->  _898_/A
+   3165.0 ps                                 _87_:           _898_/Y ->  _927_/C
+   3335.9 ps                                  _9_:           _927_/Y -> _1012_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 368.289
+
+Path _1494_/CLK to _1507_/D delay 3722.88 ps
+      0.0 ps                                       system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1494_/CLK
+    452.4 ps  \u_SPI_HEAD_MOSI_REF.reset_hw_and_sleep_out_counter [1]:           _1494_/Q -> _1227_/A
+    842.2 ps                                                    _279_:           _1227_/Y -> _1251_/B
+   1102.1 ps                                                    _301_:           _1251_/Y -> _1260_/C
+   1395.0 ps                                                    _309_:           _1260_/Y -> _1300_/C
+   1640.3 ps                                                    _346_:           _1300_/Y -> _1344_/C
+   1949.0 ps                                                    _387_:           _1344_/Y -> _1357_/B
+   2163.9 ps                                                    _399_:           _1357_/Y -> _1358_/A
+   2334.6 ps                                                    _400_:           _1358_/Y -> _1384_/B
+   2469.8 ps                                                    _424_:           _1384_/Y -> _1385_/B
+   2667.0 ps                                                    _425_:           _1385_/Y -> _1388_/B
+   2796.6 ps                                                    _428_:           _1388_/Y -> _1389_/C
+   2925.8 ps                                                    _429_:           _1389_/Y -> _1390_/D
+   3064.6 ps                                                    _430_:           _1390_/Y -> _1391_/B
+   3213.0 ps                                                    _431_:           _1391_/Y -> _1394_/A
+   3328.8 ps                                                _117_[14]:           _1394_/Y -> _1507_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.355
+
+Path _1530_/CLK to _1009_/D delay 3720.97 ps
+      0.0 ps                   system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1530_/CLK
+    465.9 ps  \u_SPI_HEAD_MOSI_REF.INST_state [1]:          _1530_/Q -> _1038_/A
+    748.0 ps                                _127_:          _1038_/Y -> _1039_/B
+    891.5 ps                                _128_:          _1039_/Y -> _1040_/A
+   1154.7 ps                                _129_:          _1040_/Y -> _1056_/B
+   1485.6 ps                                _143_:          _1056_/Y -> _1082_/C
+   2025.8 ps                                  _1_:          _1082_/Y ->  _897_/A
+   2743.7 ps                                 _86_:           _897_/Y ->  _898_/A
+   3165.0 ps                                 _87_:           _898_/Y -> _1003_/B
+   3323.4 ps                                 _14_:          _1003_/Y -> _1009_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 367.897
+
+Path _1531_/CLK to _1022_/D delay 3694.89 ps
+      0.0 ps                   system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1531_/CLK
+    463.8 ps  \u_SPI_HEAD_MOSI_REF.INST_state [2]:          _1531_/Q -> _1028_/A
+    756.6 ps                                _119_:          _1028_/Y -> _1029_/B
+   1171.4 ps                                _120_:          _1029_/Y -> _1489_/C
+   1439.0 ps                                _520_:          _1489_/Y -> _1490_/B
+   1937.8 ps              MOSI_ENABLE_HEAD_TO_SPI:          _1490_/Y ->  _892_/B
+   2620.8 ps                                 _81_:           _892_/Y ->  _893_/A
+   2873.4 ps                                 _82_:           _893_/Y ->  _990_/B
+   3085.5 ps                                 _71_:           _990_/Y ->  _991_/B
+   3221.7 ps                                 _72_:           _991_/Y ->  _992_/C
+   3303.3 ps                              _10_[0]:           _992_/Y -> _1022_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 361.885
+
+Path _1530_/CLK to _1025_/D delay 3685.31 ps
+      0.0 ps                   system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1530_/CLK
+    465.9 ps  \u_SPI_HEAD_MOSI_REF.INST_state [1]:          _1530_/Q -> _1038_/A
+    748.0 ps                                _127_:          _1038_/Y -> _1039_/B
+    891.5 ps                                _128_:          _1039_/Y -> _1040_/A
+   1154.7 ps                                _129_:          _1040_/Y -> _1056_/B
+   1485.6 ps                                _143_:          _1056_/Y -> _1082_/C
+   2025.8 ps                                  _1_:          _1082_/Y ->  _897_/A
+   2743.7 ps                                 _86_:           _897_/Y ->  _999_/C
+   3097.0 ps                                 _78_:           _999_/Y -> _1002_/A
+   3287.3 ps                              _10_[3]:          _1002_/Y -> _1025_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 368.325
+
+Path _1530_/CLK to _1024_/D delay 3643.27 ps
+      0.0 ps                   system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1530_/CLK
+    465.9 ps  \u_SPI_HEAD_MOSI_REF.INST_state [1]:          _1530_/Q -> _1038_/A
+    748.0 ps                                _127_:          _1038_/Y -> _1039_/B
+    891.5 ps                                _128_:          _1039_/Y -> _1040_/A
+   1154.7 ps                                _129_:          _1040_/Y -> _1056_/B
+   1485.6 ps                                _143_:          _1056_/Y -> _1082_/C
+   2025.8 ps                                  _1_:          _1082_/Y ->  _897_/A
+   2743.7 ps                                 _86_:           _897_/Y ->  _999_/C
+   3097.0 ps                                 _78_:           _999_/Y -> _1000_/C
+   3247.5 ps                              _10_[2]:          _1000_/Y -> _1024_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 366.121
+
+Computed maximum clock frequency (zero margin) = 237.483 MHz
+-----------------------------------------
+
+Number of paths analyzed:  109
+
+Top 20 minimum delay paths:
+Path _1026_/CLK to _1027_/D delay 34.7695 ps
+      0.0 ps       system_clk_bF$buf5: CLKBUF1_insert8/Y -> _1026_/CLK
+     39.4 ps  \SPI_MOSI.data_valid_d :          _1026_/Q ->  _916_/A
+    111.5 ps                     _12_:           _916_/Y -> _1027_/D
+
+   clock skew at destination = 0
+   hold at destination = -76.6833
+
+Path _1011_/CLK to _1011_/D delay 154.107 ps
+      0.0 ps  system_clk_bF$buf2: CLKBUF1_insert11/Y -> _1011_/CLK
+     78.5 ps                 _2_:           _1011_/Q ->  _917_/A
+    156.8 ps               _102_:            _917_/Y ->  _925_/B
+    249.8 ps                 _8_:            _925_/Y -> _1011_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.7321
+
+Path _1525_/CLK to _1525_/D delay 188.136 ps
+      0.0 ps                        system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1525_/CLK
+      0.0 ps  \u_SPI_HEAD_MOSI_REF.hw_reset_hold_done :          _1525_/Q -> _1134_/A
+    174.1 ps                                     _201_:          _1134_/Y -> _1143_/B
+    281.7 ps                                     _115_:          _1143_/Y -> _1525_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.5416
+
+Path _1968_/CLK to _1968_/D delay 207.849 ps
+      0.0 ps                system_clk_bF$buf3: CLKBUF1_insert10/Y -> _1968_/CLK
+      0.0 ps  \u_auto_data_inst.y_register [7]:           _1968_/Q -> _1864_/A
+    194.6 ps                             _807_:           _1864_/Y -> _1866_/A
+    299.3 ps                          _614_[7]:           _1866_/Y -> _1968_/D
+
+   clock skew at destination = 0
+   hold at destination = -91.4283
+
+Path _1016_/CLK to _1016_/D delay 218.35 ps
+      0.0 ps           system_clk_bF$buf8: CLKBUF1_insert5/Y -> _1016_/CLK
+    117.2 ps  \SPI_MOSI.data_register [2]:          _1016_/Q ->  _948_/A
+    213.1 ps                         _35_:           _948_/Y ->  _953_/A
+    312.3 ps                       _6_[2]:           _953_/Y -> _1016_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.9296
+
+Path _1017_/CLK to _1017_/D delay 218.35 ps
+      0.0 ps           system_clk_bF$buf8: CLKBUF1_insert5/Y -> _1017_/CLK
+    117.2 ps  \SPI_MOSI.data_register [3]:          _1017_/Q ->  _954_/A
+    213.1 ps                         _40_:           _954_/Y ->  _959_/A
+    312.3 ps                       _6_[3]:           _959_/Y -> _1017_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.9296
+
+Path _1962_/CLK to _1962_/D delay 240.804 ps
+      0.0 ps                system_clk_bF$buf9: CLKBUF1_insert4/Y -> _1962_/CLK
+    118.4 ps  \u_auto_data_inst.y_register [1]:          _1962_/Q -> _1846_/A
+    234.0 ps                             _795_:          _1846_/Y -> _1848_/A
+    334.4 ps                          _614_[1]:          _1848_/Y -> _1962_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.5819
+
+Path _1961_/CLK to _1961_/D delay 240.804 ps
+      0.0 ps                system_clk_bF$buf9: CLKBUF1_insert4/Y -> _1961_/CLK
+    118.4 ps  \u_auto_data_inst.y_register [0]:          _1961_/Q -> _1842_/A
+    234.0 ps                             _792_:          _1842_/Y -> _1845_/A
+    334.4 ps                          _614_[0]:          _1845_/Y -> _1961_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.5819
+
+Path _1965_/CLK to _1965_/D delay 240.804 ps
+      0.0 ps                system_clk_bF$buf9: CLKBUF1_insert4/Y -> _1965_/CLK
+    118.4 ps  \u_auto_data_inst.y_register [4]:          _1965_/Q -> _1855_/A
+    234.0 ps                             _801_:          _1855_/Y -> _1857_/A
+    334.4 ps                          _614_[4]:          _1857_/Y -> _1965_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.5819
+
+Path _1007_/CLK to _1013_/D delay 260.017 ps
+      0.0 ps        system_clk_bF$buf8: CLKBUF1_insert5/Y -> _1007_/CLK
+    246.6 ps  \SPI_MOSI.state_mosi [0]:          _1007_/Q ->  _929_/B
+    342.1 ps                      _11_:           _929_/Y -> _1013_/D
+
+   clock skew at destination = 0
+   hold at destination = -82.0335
+
+Path _1025_/CLK to _1025_/D delay 292.738 ps
+      0.0 ps          system_clk_bF$buf3: CLKBUF1_insert10/Y -> _1025_/CLK
+    195.9 ps  \SPI_MOSI.sclk_counter [3]:           _1025_/Q -> _1001_/C
+    307.8 ps                        _79_:           _1001_/Y -> _1002_/B
+    388.6 ps                     _10_[3]:           _1002_/Y -> _1025_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.8745
+
+Path _1519_/CLK to _1519_/D delay 296.061 ps
+      0.0 ps                              system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1519_/CLK
+    277.9 ps  \u_SPI_HEAD_MOSI_REF.HW_RESET_HOLD_counter [6]:           _1519_/Q -> _1198_/A
+    390.0 ps                                        _110_[6]:           _1198_/Y -> _1519_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.911
+
+Path _1515_/CLK to _1515_/D delay 306.54 ps
+      0.0 ps                              system_clk_bF$buf7: CLKBUF1_insert6/Y -> _1515_/CLK
+    194.7 ps  \u_SPI_HEAD_MOSI_REF.HW_RESET_HOLD_counter [2]:          _1515_/Q -> _1182_/A
+    320.8 ps                                           _241_:          _1182_/Y -> _1183_/B
+    402.4 ps                                        _110_[2]:          _1183_/Y -> _1515_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.8367
+
+Path _1628_/CLK to _1628_/D delay 319.209 ps
+      0.0 ps                               system_clk_bF$buf5: CLKBUF1_insert8/Y -> _1628_/CLK
+    327.7 ps  \u_SPI_HEAD_MOSI_REF.sclk_gen_O.clk_counter [0]:          _1628_/Q -> _1602_/A
+    414.1 ps                                         _533_[0]:          _1602_/Y -> _1628_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8579
+
+Path _1024_/CLK to _1024_/D delay 322.565 ps
+      0.0 ps          system_clk_bF$buf3: CLKBUF1_insert10/Y -> _1024_/CLK
+    198.2 ps  \SPI_MOSI.sclk_counter [2]:           _1024_/Q ->  _998_/C
+    319.3 ps                        _77_:            _998_/Y -> _1000_/B
+    417.7 ps                     _10_[2]:           _1000_/Y -> _1024_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.0952
+
+Path _1018_/CLK to _1018_/D delay 327.966 ps
+      0.0 ps           system_clk_bF$buf8: CLKBUF1_insert5/Y -> _1018_/CLK
+    197.0 ps  \SPI_MOSI.data_register [4]:          _1018_/Q ->  _960_/A
+    322.1 ps                         _45_:           _960_/Y ->  _965_/A
+    421.8 ps                       _6_[4]:           _965_/Y -> _1018_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.7926
+
+Path _1014_/CLK to _1014_/D delay 327.966 ps
+      0.0 ps           system_clk_bF$buf8: CLKBUF1_insert5/Y -> _1014_/CLK
+    197.0 ps  \SPI_MOSI.data_register [0]:          _1014_/Q ->  _934_/A
+    322.1 ps                         _23_:           _934_/Y ->  _939_/A
+    421.8 ps                       _6_[0]:           _939_/Y -> _1014_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.7926
+
+Path _1514_/CLK to _1514_/D delay 345.209 ps
+      0.0 ps                              system_clk_bF$buf1: CLKBUF1_insert12/Y -> _1514_/CLK
+    256.9 ps  \u_SPI_HEAD_MOSI_REF.HW_RESET_HOLD_counter [1]:           _1514_/Q -> _1176_/A
+    358.7 ps                                           _236_:           _1176_/Y -> _1179_/A
+    440.8 ps                                        _110_[1]:           _1179_/Y -> _1514_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.5934
+
+Path _1015_/CLK to _1015_/D delay 345.367 ps
+      0.0 ps           system_clk_bF$buf2: CLKBUF1_insert11/Y -> _1015_/CLK
+    236.4 ps  \SPI_MOSI.data_register [1]:           _1015_/Q ->  _941_/C
+    365.5 ps                         _29_:            _941_/Y ->  _947_/B
+    441.1 ps                       _6_[1]:            _947_/Y -> _1015_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.6879
+
+Path _1019_/CLK to _1019_/D delay 345.367 ps
+      0.0 ps           system_clk_bF$buf3: CLKBUF1_insert10/Y -> _1019_/CLK
+    236.4 ps  \SPI_MOSI.data_register [5]:           _1019_/Q ->  _966_/C
+    365.5 ps                         _50_:            _966_/Y ->  _972_/B
+    441.1 ps                       _6_[5]:            _972_/Y -> _1019_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.6879
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  8
+
+Top 8 maximum delay paths:
+Path input pin ext_fifo_data[0] to _1961_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[0]:          -> _1844_/A
+    114.6 ps             _794_: _1844_/Y -> _1845_/C
+    226.3 ps          _614_[0]: _1845_/Y -> _1961_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[1] to _1962_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[1]:          -> _1847_/A
+    114.6 ps             _796_: _1847_/Y -> _1848_/C
+    226.3 ps          _614_[1]: _1848_/Y -> _1962_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[2] to _1963_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[2]:          -> _1850_/A
+    114.6 ps             _798_: _1850_/Y -> _1851_/C
+    226.3 ps          _614_[2]: _1851_/Y -> _1963_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[3] to _1964_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[3]:          -> _1853_/A
+    114.6 ps             _800_: _1853_/Y -> _1854_/C
+    226.3 ps          _614_[3]: _1854_/Y -> _1964_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[4] to _1965_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[4]:          -> _1856_/A
+    114.6 ps             _802_: _1856_/Y -> _1857_/C
+    226.3 ps          _614_[4]: _1857_/Y -> _1965_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[5] to _1966_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[5]:          -> _1859_/A
+    114.6 ps             _804_: _1859_/Y -> _1860_/C
+    226.3 ps          _614_[5]: _1860_/Y -> _1966_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[6] to _1967_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[6]:          -> _1862_/A
+    114.6 ps             _806_: _1862_/Y -> _1863_/C
+    226.3 ps          _614_[6]: _1863_/Y -> _1967_/D
+
+   setup at destination = 258.654
+
+Path input pin ext_fifo_data[7] to _1968_/D delay 484.999 ps
+      0.0 ps  ext_fifo_data[7]:          -> _1865_/A
+    114.6 ps             _808_: _1865_/Y -> _1866_/C
+    226.3 ps          _614_[7]: _1866_/Y -> _1968_/D
+
+   setup at destination = 258.654
+
+-----------------------------------------
+
+Number of paths analyzed:  8
+
+Top 8 minimum delay paths:
+Path input pin ext_fifo_data[7] to _1968_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[7]:          -> _1865_/A
+    114.6 ps             _808_: _1865_/Y -> _1866_/C
+    196.8 ps          _614_[7]: _1866_/Y -> _1968_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[6] to _1967_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[6]:          -> _1862_/A
+    114.6 ps             _806_: _1862_/Y -> _1863_/C
+    196.8 ps          _614_[6]: _1863_/Y -> _1967_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[5] to _1966_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[5]:          -> _1859_/A
+    114.6 ps             _804_: _1859_/Y -> _1860_/C
+    196.8 ps          _614_[5]: _1860_/Y -> _1966_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[4] to _1965_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[4]:          -> _1856_/A
+    114.6 ps             _802_: _1856_/Y -> _1857_/C
+    196.8 ps          _614_[4]: _1857_/Y -> _1965_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[3] to _1964_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[3]:          -> _1853_/A
+    114.6 ps             _800_: _1853_/Y -> _1854_/C
+    196.8 ps          _614_[3]: _1854_/Y -> _1964_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[2] to _1963_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[2]:          -> _1850_/A
+    114.6 ps             _798_: _1850_/Y -> _1851_/C
+    196.8 ps          _614_[2]: _1851_/Y -> _1963_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[1] to _1962_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[1]:          -> _1847_/A
+    114.6 ps             _796_: _1847_/Y -> _1848_/C
+    196.8 ps          _614_[1]: _1848_/Y -> _1962_/D
+
+   hold at destination = -94.9969
+
+Path input pin ext_fifo_data[0] to _1961_/D delay 101.821 ps
+      0.0 ps  ext_fifo_data[0]:          -> _1844_/A
+    114.6 ps             _794_: _1844_/Y -> _1845_/C
+    196.8 ps          _614_[0]: _1845_/Y -> _1961_/D
+
+   hold at destination = -94.9969
+
+-----------------------------------------
+

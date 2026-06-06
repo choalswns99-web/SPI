@@ -1,0 +1,34 @@
+Qflow DRC logfile created on Sat 06 Jun 2026 04:13:32 AM PDT
+magic -dnull -noconsole  /home/yosys123/Desktop/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/Tutorials/ASIC_chip/layout/run_drc_Display_optimized_auto_SPI.tcl
+
+Magic 8.3 revision 656 - Compiled on Thu 04 Jun 2026 02:52:07 AM PDT.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+2 Magic internal units = 1 Lambda
+Loading "/home/yosys123/Desktop/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/Tutorials/ASIC_chip/layout/run_drc_Display_optimized_auto_SPI.tcl" from command line.
+Reading LEF data from file /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef.
+This action cannot be undone.
+LEF read: Processed 3337 lines.
+Cell Display_optimized_auto_SPI read from current working directory
+Display_optimized_auto_SPI: 10000 rects
+Processing timestamp mismatches.
+Timestamp mismatches found in these cells: INVX8, INVX2, NOR3X1, AND2X2, INVX4, XNOR2X1, AOI22X1, XOR2X1, OAI22X1, OR2X2, NOR2X1, AOI21X1, INVX1, NAND2X1, NAND3X1, OAI21X1, DFFPOSX1, BUFX2, CLKBUF1, FILL.
+drc = 7740
+DRC failure:  There are 7740 DRC errors in the layout.
+Premature exit.
+Synthesis flow stopped due to error condition.

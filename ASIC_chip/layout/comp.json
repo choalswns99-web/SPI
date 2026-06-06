@@ -1,0 +1,431 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "D",
+        "CLK",
+        "Q",
+        "vdd",
+        "gnd"
+      ], [
+        "D",
+        "CLK",
+        "Q",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "Display_optimized_auto_SPI",
+      "Display_optimized_auto_SPI"
+   ],
+   "devices": [
+       [
+         ["AOI21X1", 118],
+         ["NAND3X1", 80],
+         ["OAI21X1", 207],
+         ["INVX1", 155],
+         ["NAND2X1", 165],
+         ["NOR2X1", 138],
+         ["AOI22X1", 31],
+         ["BUFX2", 51],
+         ["DFFPOSX1", 109],
+         ["XOR2X1", 6],
+         ["AND2X2", 33],
+         ["OR2X2", 17],
+         ["NOR3X1", 12],
+         ["XNOR2X1", 4],
+         ["OAI22X1", 15],
+         ["CLKBUF1", 10],
+         ["INVX8", 1],
+         ["INVX4", 8],
+         ["INVX2", 10 ]
+       ], [
+         ["AOI21X1", 118 ],
+         ["NAND3X1", 80 ],
+         ["OAI21X1", 207 ],
+         ["INVX1", 155 ],
+         ["NAND2X1", 165 ],
+         ["NOR2X1", 138 ],
+         ["AOI22X1", 31 ],
+         ["BUFX2", 51 ],
+         ["DFFPOSX1", 109 ],
+         ["XOR2X1", 6 ],
+         ["AND2X2", 33 ],
+         ["OR2X2", 17 ],
+         ["NOR3X1", 12 ],
+         ["XNOR2X1", 4 ],
+         ["OAI22X1", 15 ],
+         ["CLKBUF1", 10 ],
+         ["INVX8", 1 ],
+         ["INVX4", 8 ],
+         ["INVX2", 10 ]
+       ]
+   ],
+   "nets": [
+    1184,
+    1184
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "ext_fifo_data[6]",
+        "ext_fifo_data[1]",
+        "ext_fifo_data[7]",
+        "ext_fifo_data[2]",
+        "ext_fifo_data[5]",
+        "ext_fifo_data[3]",
+        "ext_fifo_data[4]",
+        "ext_fifo_data[0]",
+        "SPI_cs",
+        "SPI_out",
+        "SPI_sclk",
+        "ext_fifo_read_en",
+        "RESX",
+        "SPI_dcx",
+        "system_clk",
+        "reset",
+        "ext_fifo_valid",
+        "SPI_request",
+        "gnd",
+        "vdd"
+      ], [
+        "ext_fifo_data[6]",
+        "ext_fifo_data[1]",
+        "ext_fifo_data[7]",
+        "ext_fifo_data[2]",
+        "ext_fifo_data[5]",
+        "ext_fifo_data[3]",
+        "ext_fifo_data[4]",
+        "ext_fifo_data[0]",
+        "SPI_cs",
+        "SPI_out",
+        "SPI_sclk",
+        "ext_fifo_read_en",
+        "RESX",
+        "SPI_dcx",
+        "system_clk",
+        "reset",
+        "ext_fifo_valid",
+        "SPI_request",
+        "gnd",
+        "vdd"
+      ]
+   ]
+  }
+]

@@ -1,0 +1,30 @@
+padgroup ext_fifo_data_vector nopermute
+twpin_ext_fifo_data[0]  nonfixed
+twpin_ext_fifo_data[1]  nonfixed
+twpin_ext_fifo_data[2]  nonfixed
+twpin_ext_fifo_data[3]  nonfixed
+twpin_ext_fifo_data[4]  nonfixed
+twpin_ext_fifo_data[5]  nonfixed
+twpin_ext_fifo_data[6]  nonfixed
+twpin_ext_fifo_data[7]  nonfixed
+restrict side T
+
+padgroup input nopermute
+twpin_system_clk  nonfixed
+twpin_SPI_request  nonfixed
+twpin_reset  nonfixed
+restrict side L
+
+padgroup output nopermute
+twpin_SPI_out  nonfixed
+twpin_SPI_dcx  nonfixed
+twpin_RESX  nonfixed
+twpin_SPI_sclk  nonfixed
+twpin_SPI_cs  nonfixed
+restrict side R
+
+padgroup fifo_out permute
+twpin_ext_fifo_valid  nonfixed
+twpin_ext_fifo_read_en  nonfixed
+restrict side TBLR
+
